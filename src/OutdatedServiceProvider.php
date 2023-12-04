@@ -9,7 +9,6 @@ use AaronFrancis\Pulse\Outdated\Livewire\Outdated;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Livewire\LivewireManager;
-use Livewire\Mechanisms\ComponentRegistry;
 
 class OutdatedServiceProvider extends ServiceProvider
 {
@@ -21,5 +20,4 @@ class OutdatedServiceProvider extends ServiceProvider
             $livewire->component('outdated', Outdated::class);
         });
     }
-
 }
