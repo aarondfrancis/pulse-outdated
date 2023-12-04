@@ -1,0 +1,39 @@
+{
+    "name": "aaronfrancis/pulse-outdated",
+    "description": "A Laravel Pulse card to show outdated composer dependencies",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aaron Francis",
+            "email": "aarondfrancis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "*",
+        "laravel/pulse": "^1.0.0@beta"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8",
+        "mockery/mockery": "^1.5.0",
+        "phpunit/phpunit": "^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "AaronFrancis\\Pulse\\Outdated\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AaronFrancis\\Pulse\\Outdated\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AaronFrancis\\Pulse\\Outdated\\OutdatedServiceProvider"
+            ]
+        }
+    }
+}
