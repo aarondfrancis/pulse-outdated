@@ -41,7 +41,7 @@ class OutdatedRecorder
             throw new RuntimeException('Composer outdated failed: ' . $result->errorOutput());
         }
 
-        json_decode($result->output(), JSON_THROW_ON_ERROR);
+        json_decode($result->output(), flags: JSON_THROW_ON_ERROR);
 
         $this->pulse->set('composer_outdated', 'result', $result->output());
     }
