@@ -9,6 +9,7 @@ use Illuminate\Config\Repository;
 use Illuminate\Support\Facades\Process;
 use Laravel\Pulse\Events\SharedBeat;
 use Laravel\Pulse\Pulse;
+use RuntimeException;
 
 class OutdatedRecorder
 {
