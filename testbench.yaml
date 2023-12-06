@@ -11,6 +11,7 @@ seeders:
 
 workbench:
   start: '/pulse'
+  user: 'aarondfrancis@gmail.com'
   install: true
   discovers:
     web: true
