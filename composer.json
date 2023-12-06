@@ -52,9 +52,6 @@
             "@build",
             "@php vendor/bin/testbench serve"
         ],
-        "lint": [
-            "pint"
-        ],
         "test": [
             "@php vendor/bin/phpunit"
         ]
