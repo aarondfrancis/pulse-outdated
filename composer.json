@@ -15,7 +15,7 @@
         "laravel/pulse": "^1.0.0@beta"
     },
     "require-dev": {
-        "orchestra/testbench": "8.x-dev",
+        "orchestra/testbench": "^8.17",
         "mockery/mockery": "^1.5.0",
         "phpunit/phpunit": "^10"
     },
