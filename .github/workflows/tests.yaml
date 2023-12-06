@@ -57,7 +57,7 @@ jobs:
            composer update --prefer-dist --no-interaction --no-progress --${{ matrix.stability }}
 
       - name: Execute tests
-        run: vendor/bin/pest
+        run: vendor/bin/phpunit
         env:
           DB_CONNECTION: mysql
           DB_USERNAME: root
@@ -111,7 +111,7 @@ jobs:
            composer update --prefer-dist --no-interaction --no-progress
 
       - name: Execute tests
-        run: vendor/bin/pest
+        run: vendor/bin/phpunit
         env:
           DB_CONNECTION: pgsql
           DB_PASSWORD: password
