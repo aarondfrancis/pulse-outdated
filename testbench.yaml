@@ -1,0 +1,25 @@
+providers:
+  - Laravel\Pulse\PulseServiceProvider
+  - AaronFrancis\Pulse\Outdated\OutdatedServiceProvider
+  - Workbench\App\Providers\WorkbenchServiceProvider
+
+migrations:
+  - vendor/laravel/pulse/database/migrations
+
+seeders:
+  - Workbench\Database\Seeders\DatabaseSeeder
+
+workbench:
+  start: '/pulse'
+  install: true
+  discovers:
+    web: true
+    api: false
+    commands: false
+    views: true
+  build:
+    - asset-publish
+    - migrate-refresh
+  assets:
+    - laravel-assets
+  sync: []
