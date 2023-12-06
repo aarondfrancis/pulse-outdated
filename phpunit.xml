@@ -11,9 +11,9 @@
   </testsuites>
   <php>
     <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
-    <env name="MYSQL_DATABASE" value="(null)" />
-    <env name="MYSQL_USERNAME" value="(null)" />
-    <env name="MYSQL_PASSWORD" value="(null)" />
+    <env name="MYSQL_DATABASE" value="laravel_pulse"/>
+    <env name="MYSQL_USERNAME" value="root"/>
+    <env name="MYSQL_PASSWORD" value=""/>
   </php>
   <source>
     <include>

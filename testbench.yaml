@@ -1,4 +1,5 @@
 providers:
+  - Livewire\LivewireServiceProvider
   - Laravel\Pulse\PulseServiceProvider
   - AaronFrancis\Pulse\Outdated\OutdatedServiceProvider
   - Workbench\App\Providers\WorkbenchServiceProvider
@@ -15,7 +16,6 @@ workbench:
   install: true
   discovers:
     web: true
-    api: false
     commands: false
     views: true
   build:
