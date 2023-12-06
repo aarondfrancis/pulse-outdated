@@ -11,9 +11,11 @@
   </testsuites>
   <php>
     <env name="APP_KEY" value="AckfSECXIvnK5r28GVIWUAxmbBSjTsmF"/>
+    <!--
     <env name="MYSQL_DATABASE" value="(null)" />
     <env name="MYSQL_USERNAME" value="(null)" />
     <env name="MYSQL_PASSWORD" value="(null)" />
+    -->
   </php>
   <source>
     <include>

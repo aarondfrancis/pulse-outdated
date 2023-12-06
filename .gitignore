@@ -2,6 +2,7 @@
 /vendor
 .env
 .phpunit.result.cache
+phpunit.xml
 npm-debug.log
 yarn-error.log
 composer.lock
