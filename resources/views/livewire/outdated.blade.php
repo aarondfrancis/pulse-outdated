@@ -31,11 +31,13 @@
                                 <code class="block text-xs text-gray-900 dark:text-gray-100 truncate" title="">
                                     {{ $package['name'] }}
                                 </code>
-                                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 truncate" title="">
-                                    <a href='{{ $package['source'] }}'>
-                                        {{ str($package['source'])->after('://') }}
-                                    </a>
-                                </p>
+                                @isset($package['source'])
+                                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400 truncate" title="">
+                                        <a href='{{ $package['source'] }}'>
+                                            {{ str($package['source'])->after('://') }}
+                                        </a>
+                                    </p>
+                                @endisset
                             </x-pulse::td>
                             <x-pulse::td numeric class="text-gray-700 dark:text-gray-300 font-bold">
                                 {{ $package['version'] }}
