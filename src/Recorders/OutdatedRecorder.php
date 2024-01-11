@@ -39,11 +39,17 @@ class OutdatedRecorder
         $result = Process::run('composer outdated -D -f json');
 
         if ($result->failed()) {
-            throw new RuntimeException('Composer outdated failed: ' . $result->errorOutput());
+            throw new RuntimeException('Composer outdated failed: '.$result->errorOutput());
         }
 
         json_decode($result->output(), flags: JSON_THROW_ON_ERROR);
 
         $this->pulse->set('composer_outdated', 'result', $result->output());
+
+        $npmResult = Process::run('npm outdated --long --json');
+
+        json_decode($npmResult->output(), flags: JSON_THROW_ON_ERROR);
+
+        $this->pulse->set('npm_outdated', 'result', $npmResult->output());
     }
 }

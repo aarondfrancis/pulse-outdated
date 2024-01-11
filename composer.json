@@ -1,6 +1,6 @@
 {
     "name": "aaronfrancis/pulse-outdated",
-    "description": "A Laravel Pulse card to show outdated composer dependencies",
+    "description": "A Laravel Pulse card to show outdated composer and npm dependencies",
     "type": "library",
     "license": "MIT",
     "authors": [

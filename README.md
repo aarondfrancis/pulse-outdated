@@ -1,6 +1,6 @@
-# Outdated Composer Dependencies card for Laravel Pulse
+# Outdated Composer and npm Dependencies card for Laravel Pulse
 
-This card will show you outdated Composer dependencies.
+This card will show you outdated Composer and npm dependencies.
 
 ## Installation
 
@@ -12,7 +12,7 @@ composer require aaronfrancis/pulse-outdated
 
 ## Register the recorder
 
-Right now, the Composer dependencies will only be checked once per day. To run the checks you must add the `OutdatedRecorder` to the `pulse.php` file.
+Right now, the Composer and npm dependencies will only be checked once per day. To run the checks you must add the `OutdatedRecorder` to the `pulse.php` file.
 
 ```diff
 return [
@@ -35,6 +35,8 @@ Then, you can modify the `dashboard.blade.php` file:
 ```diff
 <x-pulse>
 +    <livewire:outdated cols='4' rows='2' />
+
++    <livewire:npm_outdated cols='4' rows='2' />
 
     <livewire:pulse.servers cols="full" />
 
