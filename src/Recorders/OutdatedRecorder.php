@@ -32,7 +32,16 @@ class OutdatedRecorder
 
     public function record(SharedBeat $event): void
     {
-        if ($event->time !== $event->time->startOfDay()) {
+        $class = self::class;
+        $expression = $this->config->get(sprintf('pulse.recorders.%s.cron', $class), '0 0 * * *');
+
+        if (! CronExpression::isValidExpression($expression)) {
+            throw new RuntimeException('Invalid cron expression: '.$expression);
+        }
+
+        $cronExpression = CronExpression::factory($expression);
+
+        if (! $cronExpression->isDue($event->time)) {
             return;
         }
 
